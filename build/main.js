@@ -71,7 +71,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function (array, ClassName) {
+/* harmony default export */ __webpack_exports__["a"] = (function (array, className) {
   var menu = document.createElement('ul');
   menu.className = className;
   var listItems='';
@@ -90,7 +90,7 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menu__ = __webpack_require__(0);
 
-var menu = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__menu__["a" /* default */])(['Главная', 'Обо мне', 'Портфолио'], 'menu');
+var menu = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__menu__["a" /* default */])(['Главная', 'Обо мне', 'Портфолио', 'Портфолио2'], 'menu');
 document.body.appendChild(menu);
 
 /***/ })
