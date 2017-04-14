@@ -67,11 +67,24 @@
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
-/* 1 */
+/* 0 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'C:\\Users\\Dave_Ghan\\WebstormProjects\\TUTS\\webpack-app\\source\\index.js'\n    at Error (native)");
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_menu_menu__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_menu_menu___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_menu_menu__);
+
+var menu = __WEBPACK_IMPORTED_MODULE_0__components_menu_menu___default()(['Главная', 'Блог'], 'menu');
+document.body.appendChild(menu);
+
+console.log('in blog.js');
 
 /***/ })
 /******/ ]);
