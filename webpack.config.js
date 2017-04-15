@@ -5,6 +5,9 @@ const pug  = require('./webpack/pug');
 const devserver = require('./webpack/devserver');
 const sass = require('./webpack/sass');
 const css = require('./webpack/css');
+const extractCSS = require('./webpack/css.extract');
+const uglifyJS = require('./webpack/js.uglify');
+const webpack = require('webpack');
 
 const PATHS = {
   source: path.join(__dirname, 'source'),
@@ -23,22 +26,33 @@ const common = merge([
       plugins: [
         new HtmlWebpackPlugin({
           filename: 'index.html',
-          chunks: ['index'],
+          chunks: ['index', 'common'],
           template: PATHS.source + '/pages/index/index.pug'
         }),
         new HtmlWebpackPlugin({
           filename: 'blog.html',
-          chunks: ['blog'],
+          chunks: ['blog', 'common'],
           template: PATHS.source + '/pages/blog/blog.pug'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+          name: 'common'
+        }),
+        new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery'
         })
-      ]
+      ],
     },
     pug()
 ]);
 
 module.exports = function(env) {
   if (env === 'production') {
-    return common;
+    return merge([
+      common,
+      extractCSS(),
+      uglifyJS({useSourceMap: true})
+    ]);
   }
   if (env === 'development') {
     return merge([
