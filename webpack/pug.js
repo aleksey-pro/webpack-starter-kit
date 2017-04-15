@@ -4,9 +4,9 @@ module.exports = function() {
       rules: [{
         test: /\.pug$/,
         loader: 'pug-loader',
-        options: {pretty: true}
-        }
-      ]
-    }
-  }
+        options: {pretty: true},
+      },
+      ],
+    },
+  };
 };

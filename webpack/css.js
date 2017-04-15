@@ -6,10 +6,10 @@ module.exports = function(paths) {
         include: paths,
         use: [
           'style-loader',//добавляет стили в ДОМ лерева через тег style
-          'css-loader' // добавляет стили в граф зависимостей
-        ]
-      }
-      ]
-    }
-  }
+          'css-loader', // добавляет стили в граф зависимостей
+        ],
+      },
+      ],
+    },
+  };
 };

@@ -10,6 +10,5 @@ module.exports = function(useSourceMap) {
         }
       })
     ]
-  }
+  };
 };
-
